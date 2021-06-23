@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ChakraProvider } from "@chakra-ui/react"
+import Airbnb from "./components/Airbnb"
+
 
 ReactDOM.render(
   <React.StrictMode>
+    <ChakraProvider>
     <App />
+    {/* <Airbnb /> */}
+    </ChakraProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
