@@ -3,7 +3,7 @@ import { Box, Image, Badge, Stack, Text, LinkOverlay } from "@chakra-ui/react";
 
 const Recipe = ({ recipe, onFilter }) => {
     return (
-        <LinkOverlay href={recipe.Source} isExternal>
+        <a href={recipe.Source} target="_blank">
             <Box w='400px' rounded='10px' overflow='hidden' boxShadow='2xl' bg='gray.200' margin='10px 5px' cursor="pointer">
                 <Image src={recipe.Image} alt='card view link to a recipe' />
                 <Box p={2}>
@@ -20,7 +20,7 @@ const Recipe = ({ recipe, onFilter }) => {
                     </Box>
                 </Box>
             </Box>
-        </LinkOverlay>
+        </a>
     );
 };
 
@@ -34,8 +34,7 @@ const styles = {
         // boxShadow:'2xl',
         // bg:'gray.200', 
         // margin:'10px 5px',
-        // bg:'gray200',
-        // boxShadow:'xl'
+        // bg:'gray200', // boxShadow:'xl'
     }
 }
 
