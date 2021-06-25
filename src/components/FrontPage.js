@@ -1,6 +1,3 @@
-// import Head from 'next/head';
-// import Search from "./Search";
-
 import {
     Box,
     Heading,

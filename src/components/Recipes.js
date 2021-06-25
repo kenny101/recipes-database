@@ -1,10 +1,10 @@
 import Recipe from './Recipe'
-import { Box, Image, Badge, Stack, Text, Divider } from "@chakra-ui/react";
+import { Box, Image, Badge, Stack, Text, Divider, Container, Grid } from "@chakra-ui/react";
 
 const Recipes = ({ recipes, onFilter }) => {
   return (
     <>
-      <Stack spacing={4} direction="row" padding="15px">
+      <Stack style={styles.recipe_container}>
         {recipes.map((recipe) => (
           <Recipe key={recipe.Name} recipe={recipe} onFilter={onFilter} />
         ))}
@@ -12,5 +12,16 @@ const Recipes = ({ recipes, onFilter }) => {
     </>
   );
 };
+
+const styles = {
+  recipe_container: {
+    margin: "0",
+    padding: "0",
+    display: 'grid',
+    direction: "row",
+    justifyContent: "center",
+    gridTemplateColumns: 'repeat(auto-fill, 415px)',
+  }
+}
 
 export default Recipes;
