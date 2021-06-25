@@ -1,9 +1,9 @@
-import { Box, Image, Badge, Stack, Text, Link } from "@chakra-ui/react";
+import { Box, Image, Badge, Stack, Text, LinkOverlay } from "@chakra-ui/react";
 
 
 const Recipe = ({ recipe, onFilter }) => {
     return (
-        <Link href={recipe.Source} isExternal>
+        <LinkOverlay href={recipe.Source} isExternal>
             <Box w='400px' rounded='10px' overflow='hidden' boxShadow='2xl' bg='gray.200' margin='10px 5px' cursor="pointer">
                 <Image src={recipe.Image} alt='card view link to a recipe' />
                 <Box p={2}>
@@ -20,7 +20,7 @@ const Recipe = ({ recipe, onFilter }) => {
                     </Box>
                 </Box>
             </Box>
-        </Link>
+        </LinkOverlay>
     );
 };
 
