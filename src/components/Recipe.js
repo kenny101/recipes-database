@@ -8,7 +8,8 @@ const Recipe = ({ recipe, onFilter }) => {
                 <Image src={recipe.Image} alt='card view link to a recipe' />
                 <Box p={2}>
                     <Text as='b'>{recipe.Name}</Text>
-                    <Divider orientation="horizontal" borderColor="grey" borderRadius='10px' border="2px" opacity='0.2' />
+                    {/* <Divider orientation="horizontal" borderColor="grey" borderRadius='10px' border="2px" opacity='0.2' /> */}
+                    <hr></hr>
                     <Text color='red.600' as='b'>Missing Ingredients:</Text>
                     <Box>
                         {recipe.Ingredients.split(',').map((ingredient) => (

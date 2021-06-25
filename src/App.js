@@ -1,7 +1,12 @@
-import Header from "./components/Header";
-import Recipe from "./components/Recipe";
 import Recipes from "./components/Recipes";
+import FrontPage from "./components/FrontPage";
+import DrawerMenu from "./components/Drawer";
+import Navbar from "./components/Navbar";
+import DropdownExampleSearchSelection from "./components/Search";
 import { useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+
+
 
 import * as React from "react";
 
@@ -25,33 +30,28 @@ function App({ Component }) {
         "baking powder, beer, chili, curry, fish, flour, garlic, granulated sugar, paprika, rice, sea salt, smoked paprika, turkey, vinegar, white wine, white wine vinegar, wine vinegar",
     },
     {
-      Name: "Breakfast Burrito | John Quilter",
-      Image: "http://img.youtube.com/vi/53NXw5qdKYc/maxresdefault.jpg",
-      Source:
-        "https://www.youtube.com/watch?v=53NXw5qdKYc&list=PL6tScHkhWPyntJSK8g8NCy7Rluw4XD0kz&t=0s",
-      Ingredients:
-        "ale, bacon, bread, butter, eggs, flatbread, ham, mushrooms, pepper, potatoes, rice, steak",
+      "Name": "Turkey Pakora | John Quilter",
+      "Image": "http://img.youtube.com/vi/nZGZSTKpl98/maxresdefault.jpg",
+      "Source": "https://www.youtube.com/watch?v=nZGZSTKpl98&list=PL6tScHkhWPyntJSK8g8NCy7Rluw4XD0kz&t=0s",
+      "Ingredients": "butter, chiles, chili, chili powder, coco, coconut, coriander, cumin, flour, gin, ginger, ground coriander, ground cumin, lemon, lemon zest, masala, methi, sunflower oil, turkey, turkey meat",
     },
   ]);
 
-  const [properties, setProperty] = useState([{
-    imageUrl: "https://bit.ly/2Z4KKcF",
-    imageAlt: "Rear view of modern home with pool",
-    beds: 3,
-    baths: 2,
-    title: "Modern home in city center in the heart of historic Los Angeles",
-    formattedPrice: "$1,900.00",
-    reviewCount: 34,
-    rating: 4,
-  }]);
+
 
   return (
-      <Recipes recipes={recipes} onFilter={filterRecipe}/>
+    <>
+      <Router>
+        <Navbar />
+      </Router>
+      <FrontPage />
+      <Recipes recipes={recipes} onFilter={filterRecipe} />
+    </>
   );
 }
 
 // Delete recipe
-const filterRecipe = (id) =>  {
+const filterRecipe = (id) => {
   console.log('delete', id);
 }
 
