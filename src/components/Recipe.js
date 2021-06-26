@@ -3,8 +3,8 @@ import { Box, Image, Badge, Stack, Text, LinkOverlay } from "@chakra-ui/react";
 
 const Recipe = ({ recipe, onFilter }) => {
     return (
-        <a href={recipe.Source} target="_blank">
-            <Box w='400px' rounded='10px' overflow='hidden' boxShadow='2xl' bg='gray.200' margin='10px 5px' cursor="pointer">
+        <a href={recipe.Source} target="_blank" width='fit'>
+            <Box w='fit' rounded='10px' overflow='hidden' boxShadow='2xl' bg='gray.200' margin='10px 5px' cursor="pointer">
                 <Image src={recipe.Image} alt='card view link to a recipe' />
                 <Box p={2}>
                     <Text as='b'>{recipe.Name}</Text>
