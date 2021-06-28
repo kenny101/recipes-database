@@ -5,9 +5,11 @@ export const Nav = styled.nav`
   height: 80px;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
   align-items: center;
-  padding: 0.5rem calc((100vw - 1000px) / 2);
+  padding: 15px;
+  // padding: 0.5rem calc((100vw - 1000px) / 2);
   position: fixed;
   transition: all .2s ease-in;
   /* Third Nav */
@@ -16,11 +18,9 @@ export const Nav = styled.nav`
 export const NavBtn = styled.nav`
   display: flex;
   align-items: right;
-  margin-right: 24px;
   /* Third Nav */
-  /* justify-content: flex-end;
-  width: 100vw; */
-  padding: 25px;
+  justify-content: flex-end;
+  padding: 5px;
 
   @media screen and (max-width: 768px) {
     display: none;
