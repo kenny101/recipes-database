@@ -7,7 +7,7 @@ import {
     NavBtn,
     NavBtnLink
 } from './NavbarElements';
-
+import SearchModal from './SearchModal';
 
 import ThemeButton from './ThemeButton';
 
@@ -21,9 +21,7 @@ const Navbar = () => {
     return (
         <>
             <Nav>
-                <Button leftIcon={<FaSearch color="gray.100" />} colorScheme="gray" variant="outline" size="lg" width="100%" textAlign="left" textColor="gray.400" justifyContent="flex-start">
-                    Click here to add Ingredients
-                </Button>
+                <SearchModal/>
                 <NavBtn>
                     <ThemeButton />
                 </NavBtn>

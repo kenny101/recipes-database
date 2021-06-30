@@ -3,8 +3,12 @@ import FrontPage from "./components/FrontPage";
 import Navbar from "./components/Navbar";
 import { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+import DropdownExampleClearableMultiple from "./components/Search";
+import pkg from 'semantic-ui-react/package.json'
+import ReactDOM from "react-dom";
+import { Dropdown } from 'semantic-ui-react'
 
-
+import { Container, Header, List } from "semantic-ui-react";
 
 import * as React from "react";
 
@@ -58,7 +62,7 @@ function App({ Component }) {
       "Image": "http://img.youtube.com/vi/ioIWgvvfcAU/maxresdefault.jpg",
       "Source": "https://www.youtube.com/watch?v=VE-OOeJqiQE&list=PL8zglt-LDl-iwBHEl3Pw1IhWGp9cfgMrc&t=0s",
       "Ingredients": "bananas, beef, bread, cauliflower, cumin, ground beef, jack, jackfruit, methi, mushrooms, pork, soy sauce, tempeh, tofu",
-      
+
     },
     {
       "Name": "Asian Americans Make Asian Dishes For The First Time • Tasty",
@@ -173,14 +177,11 @@ function App({ Component }) {
   );
 }
 
+
 // Delete recipe
 const filterRecipe = (id) => {
   console.log('delete', id);
 }
 
-const headingStyle = {
-  color: "red",
-  backgroundColor: "purple",
-};
 
 export default App;
