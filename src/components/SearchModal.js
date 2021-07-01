@@ -47,9 +47,6 @@ function SearchModal() {
                     </ModalBody>
 
                     <ModalFooter>
-                        <Button colorScheme="blue" mr={3} onClick={onClose}>
-                            Search
-                        </Button>
                     </ModalFooter>
                 </ModalContent>
             </Modal>
