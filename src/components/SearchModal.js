@@ -17,6 +17,7 @@ import {
     TagCloseButton,
     HStack,
     Box,
+    Text,
 } from "@chakra-ui/react"
 
 import { FaSun, FaMoon, FaSearch, FaGithub } from 'react-icons/fa';
@@ -35,17 +36,15 @@ function SearchModal() {
 
             <Modal isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
-
                 <ModalContent>
                     <ModalHeader>
-                        <Button colorScheme="blue" mr={3} onClick={onClose}>
-                            Search
-                        </Button></ModalHeader>
+                        <Text> </Text>
+                        <text> </text>
+                    </ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
                         <Search />
                     </ModalBody>
-
                     <ModalFooter>
                     </ModalFooter>
                 </ModalContent>

@@ -4,7 +4,7 @@ import { Dropdown } from 'semantic-ui-react'
 const ingredientOptions = [{
   text: "Bread",
   key: "bread",
-  value: "bread"
+  value: "bread",
 }, {
   text: "Butter",
   key: "butter",
@@ -1028,6 +1028,10 @@ const ingredientOptions = [{
 }]
 
 
+const onChange = function(){
+  // console.log(ingredientOptions)
+}
+
 const Search = () => (
   <div>
     <Dropdown
@@ -1036,11 +1040,14 @@ const Search = () => (
       multiple
       search
       selection
+      save defaults
+      onChange={onChange}
       options={ingredientOptions}
-      placeholder='Type and select to add ingredients'
+      placeholder='Search ingredients here'
     />
   </div>
-
 )
+
+// console.log(Search.selection);
 
 export default Search

@@ -23,8 +23,7 @@ const styles = {
     direction: "row",
     justifyContent: "center",
     gridTemplateColumns: 'repeat(auto-fill, 415px)',
-    // grid-auto-flow: 'dense',
-    // gap: '5px',
+    gap: '5px',
   }
 }
 
